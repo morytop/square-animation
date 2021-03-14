@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Comfortaa', cursive, sans-serif;
+    background-color: #333;
+    color: white;
+}
+
+.btn-zoom,
+.btn-move,
+.btn-color {
+    width: 120px;
+    position: absolute;
+    top: 30px;
+    padding: 10px 30px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: translateX(-50%);
+
+}
+
+.btn-zoom {
+    left: 30%
+}
+
+.btn-move {
+    left: 50%;
+}
+
+.btn-color {
+    left: 70%;
+}
+
+.btn-zoom:hover,
+.btn-move:hover,
+.btn-color:hover {
+    transition: background-color .3s;
+    background-color: #fff;
+    color: black;
+
+}
+
+.btn-zoom:hover~div {
+    width: 400px;
+    height: 400px;
+}
+
+.btn-move:hover~div {
+    top: 300px;
+}
+
+.btn-color:hover~div {
+    background-color: black;
+    box-shadow: 3px 3px 5px black;
+    border: 1px solid white;
+}
+
+.square {
+    position: absolute;
+    top: 120px;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color .3s, box-shadow .3s;
+}
+
+.blue {
+    left: 30%;
+    background-color: royalblue;
+    border: 1px solid darkblue;
+    box-shadow: 3px 3px 5px royalblue;
+
+}
+
+.red {
+    left: 50%;
+    background-color: tomato;
+    border: 1px solid darkred;
+    box-shadow: 3px 3px 5px tomato;
+}
+
+.green {
+    left: 70%;
+    background-color: greenyellow;
+    border: 1px solid darkgreen;
+    box-shadow: 3px 3px 5px greenyellow;
+}
